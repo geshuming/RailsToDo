@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row due_soon_<%= todo_item.due_soon %>">
  <div class="complete">
    <%= link_to complete_todo_list_todo_item_path(@todo_list, todo_item.id), method: :patch do %>
     <% if todo_item.completed? %>
