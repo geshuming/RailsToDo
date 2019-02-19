@@ -1,6 +1,11 @@
-<h1>Editing Todo List</h1>
+<h1 class="todo_list_title">Editing Todo List</h1>
 
+<div class="forms">
 <%= render 'form', todo_list: @todo_list %>
+</div>
 
+<div class="links">
+<%= link_to 'Destroy', @todo_list, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Show', @todo_list %> |
 <%= link_to 'Back', todo_lists_path %>
+</div>

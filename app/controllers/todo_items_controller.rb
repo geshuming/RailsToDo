@@ -18,7 +18,11 @@ class TodoItemsController < ApplicationController
    end
 
    def complete
-    @todo_item.update_attribute(:completed_at, Time.now)
+    if @todo_item.completed_at?
+        @todo_item.update_attribute(:completed_at, nil)
+    else
+        @todo_item.update_attribute(:completed_at, Time.now)
+    end
     redirect_to @todo_list, notice: "Todo item completed"
    end
 
