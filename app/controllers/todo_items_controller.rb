@@ -18,7 +18,7 @@ class TodoItemsController < ApplicationController
    end
 
    def complete
-    if @todo_item.completed_at?
+    if @todo_item.completed?
         @todo_item.update_attribute(:completed_at, nil)
     else
         @todo_item.update_attribute(:completed_at, Time.now)
@@ -37,7 +37,7 @@ class TodoItemsController < ApplicationController
    end
 
    def todo_item_params
-    params[:todo_item].permit(:content)
+    params[:todo_item].permit(:content, :due_at)
    end
 
    

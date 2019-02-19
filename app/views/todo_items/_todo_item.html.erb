@@ -16,7 +16,10 @@
   <div class="todo_item">
    <p><%= todo_item.content %></p>
   </div>
- <% end %>  
+ <% end %>
+ <div class="due_at">
+   <p>DUE AT: <%= todo_item.due_at.strftime("%H%M %-d %b %Y") %></p>
+  </div>  
   <div class="trash">
    <%= link_to todo_list_todo_item_path(@todo_list, todo_item.id), method: :delete, data: { confirm: "Are you sure?" } do %>
     <i class="fa fa-trash"></i>
