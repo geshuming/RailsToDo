@@ -1,24 +1,15 @@
-# README
+# Simple Ruby ToDo App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Requirements
 
-Things you may want to cover:
+1. Ruby 2.5.3 and newer
+2. Rails 5.2.2 and newer
 
-* Ruby version
+## Setup
 
-* System dependencies
+1. Run `rails server` to start the server at `localhost:3000`
+2. Go to http://localhost:3000 to try out the app!
 
-* Configuration
+## Notes
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is just a learning experience!
