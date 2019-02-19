@@ -1,5 +1,5 @@
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
- <div class="textbox"><%= f.text_field :content, placeholder: "New Todo" %></div>
- <div class="datetime">Due Date: <%= f.datetime_select :due_at, order: [:day, :month, :year], default: Time.now %></div>
+ <div class="textbox"><%= f.text_field :content, placeholder: "New ToDo...", :required => true %></div>
+ <div class="datetime">Set Due Date: <%= f.datetime_select :due_at, order: [:day, :month, :year], default: Time.now %></div>
  <div class="submit_button"><%= f.submit %></div>
 <% end %>
